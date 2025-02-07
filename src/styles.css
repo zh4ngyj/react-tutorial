@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  /*让 width 和 height 包含内边距 (padding) 和 边框 (border)，不会影响整体大小。这可以避免计算复杂的尺寸问题。*/
+  box-sizing: border-box;
+}
+
+body {
+  /* 让文本使用无衬线字体（如 Arial、Helvetica） */
+  font-family: sans-serif;
+  /* 设置外边距，让整个页面与浏览器边缘保持 20px 间距 */
+  margin: 20px;
+  /* 去掉默认的内边距，确保布局更干净 */
+  padding: 0;
+}
+
+.square {
+  /* 设置背景颜色为白色 */
+  background: #fff;
+  /* 灰色 (#999) 边框，用于显示棋盘的格子 */
+  border: 1px solid #999;
+  /* 让每个 .square 按钮左浮动，这样多个 .square 会自动排列在一行 */
+  float: left;
+  /* 设置字体大小 24px，让 "X" 和 "O" 更清晰可见。 */
+  font-size: 24px;
+  /* 设置加粗，让字更突出。 */
+  font-weight: bold;
+  /* 让文字垂直居中，因为 height: 34px;，所以 line-height 设为相同的 34px。 */
+  line-height: 34px;
+  /* 正方形的高度（34px） */
+  height: 34px;
+  /* 负外边距，让方格之间的边框重叠，形成更清晰的棋盘边界 */
+  margin-right: -1px;
+  /* 同上，防止棋盘格之间出现明显的空隙。 */
+  margin-top: -1px;
+  /* 去掉内部填充，避免内容偏移 */
+  padding: 0;
+  /* 让 "X" 和 "O" 水平居中显示 */
+  text-align: center;
+  /* 正方形的宽度（34px） */
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
